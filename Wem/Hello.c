@@ -4,7 +4,7 @@ int main()
 {
     int i;
     for (i = 0; i < 10; i++){
-        printf("Yatta! Yatta!\n");
+        printf("5_31 now!!\n");
     }
     return 0;
 }
