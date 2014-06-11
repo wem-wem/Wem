@@ -56,6 +56,9 @@ int main() {
 
 		Texture Key("res/key.png");
 
+		Texture enemy("res/enemy.png");
+		Texture rod("res/rod.png");
+
 		float start_angle = 0;
 		float title_angle = 0;
 
@@ -1201,9 +1204,16 @@ int main() {
 		int gravity_mode1 = 1;
 		int game_mode1 = 0;
 		int clear_mode1 = 0;
+		int enemy_mode = 0;
 		float char_angle1 = 0;
 		float door_angle1 = 0;
 		float clear_angle1 = 0;
+		float enemy_angle = 0;
+
+		Texture clear2_1("res/clear2_1.png");
+		// サウンド読み込み
+		Media disapearance("res/BGM_SE/disappearance.wav");
+		Media False("res/BGM_SE/False.wav");
 
 		// 再生
 		playing.play();
@@ -1912,8 +1922,70 @@ int main() {
 						walk.looping(false);
 					}
 				}
-				/*************************************************/
 
+				/*************************************************/
+				/*				敵とアイテムの表示					*/
+				/*************************************************/
+				if (enemy_mode != 1){
+					enemy_angle += 0.04;
+					float enemy_float = (std::sin(enemy_angle));
+					float enemy_float1 = (std::cos(enemy_angle));
+
+					if (enemy_angle == 40 || enemy_angle == -40)
+					{
+						enemy_angle *= -1;
+					}
+
+					if (enemy_angle == 40 || enemy_angle == -40)
+					{
+						enemy_angle *= -1;
+					}
+
+					drawTextureBox(0 + enemy_float1, -310 + enemy_float,
+						130, 130,
+						0, 0, 128, 128,
+						enemy, Color(1, 1, 1));
+
+					if (x1 <= -445 && x1 >= -590){
+						if (y1 >= 0 && y1 <= 100){
+							False.play();
+							False.gain(0.5);
+
+							x1 = 0;
+							y1 = 0;
+						}
+					}
+
+					drawTextureBox(150 + enemy_float1, -190 + enemy_float,
+						130, 130,
+						0, 0, 128, 128,
+						enemy, Color(1, 1, 1));
+
+					if (x1 <= -615 && x1 >= -730){
+						if (y1 >= 100 && y1 <= 230){
+							False.play();
+							False.gain(0.5);
+
+							x1 = 0;
+							y1 = 0;
+						}
+					}
+
+					drawTextureBox(330, 80,
+						64, 64,
+						0, 0, 32, 32,
+						rod, Color(1, 1, 1));
+					if (x1 <= -790 && x1 >= -900){
+						if (y1 >= 340 && y1 <= 430){
+
+							disapearance.play();
+							disapearance.gain(0.5);
+
+							enemy_mode = 1;
+						}
+					}
+				}
+				/*************************************************/
 				// 枠線(ステージ全景)
 				drawBox(-502, -302, 1004, 604, 3, Color(0, 0, 0));
 
@@ -2103,7 +2175,7 @@ int main() {
 				/*　　ゲームの進行に合わせた画像表示の切り替え　*/
 				/****************************************/
 
-				if (x1 >= -60 && x1 <= -10){
+				if (x1 >= -50 && x1 <= 10){
 					if (y1 >= 110 && y1 <= 160){
 						game_mode1 = 1;
 					}
@@ -2140,44 +2212,17 @@ int main() {
 								drawTextureBox(-290, 300 - clear_angle1,
 									500, 500,
 									0, 0, 256, 256,
-									clear1, Color(1, 1, 1));
+									clear2_1, Color(1, 1, 1));
 							}
 
-							if (app_env.isPushKey(GLFW_KEY_UP)){
-								clear_mode1 = 1;
-							}
-							if (clear_mode1 == 1){
-
-								drawTextureBox(-290, 300 - clear_angle1,
-									500, 500,
-									0, 0, 256, 256,
-									clear2, Color(1, 1, 1));
-
-								if (app_env.isPushKey(GLFW_KEY_ENTER)){
-									break;
-								}
-							}
-
-							if (app_env.isPushKey(GLFW_KEY_DOWN)){
-								clear_mode1 = 2;
-							}
-							if (clear_mode1 == 2){
-
-								drawTextureBox(-290, 300 - clear_angle1,
-									500, 500,
-									0, 0, 256, 256,
-									clear3, Color(1, 1, 1));
-
-								if (app_env.isPushKey(GLFW_KEY_ENTER)){
-									break;
-								}
+							if (app_env.isPushKey(GLFW_KEY_ENTER)){
+								break;
 							}
 						}
 					}
 				}
 				app_env.update();
 			}
-
 			// 入力のフラッシュ
 			app_env.flushInput();
 		}
