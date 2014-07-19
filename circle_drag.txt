@@ -1,39 +1,45 @@
 float cx, cy, r;
-float dx, dy;
+//float dx, dy;
 float px, py;
 float ox, oy;
 
-boolean on;
-boolean dragging;
+//boolean on = false;
+boolean dragging = false;
 
 void setup(){
   size(500,500);
   cx = width/2;
   cy = height/2;
-  r = 100;
+  r = 100;  
 }
 
 void draw(){
   background(255);
   ellipse(cx,cy,r*2,r*2);
-  if(dx*dx + dy*dy < r*r){
-    on = true;
-  }
-  else{
-    on = false;
-  }
+
 }
 
 void mousePressed(){
   px = mouseX;
   py = mouseY;
-  dx = px - cx;
-  dy = py - cy;
-  if(on){
-    fill(255,0,0);
+//  dx = px - cx;
+//   dy = py - cy;
+
+//  if(dx*dx + dy*dy < r*r){
+//    on = true;
+//  }
+//  else{
+//    on = false;
+//  }
+//  if(on){
+  float dx = px - cx;
+  float dy = py - cy;
+  if(dx*dx + dy*dy < r*r){
+  fill(255,0,0);
     ox = cx;
     oy = cy;
     dragging = true;
+//  }
   }
 }
 
@@ -46,6 +52,6 @@ void mouseDragged(){
 }
 
 void mouseReleased(){
-  fill(255);
   dragging = false;
+  fill(255);
 }
