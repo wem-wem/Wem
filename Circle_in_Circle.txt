@@ -1,0 +1,39 @@
+float ox,oy,or;
+float ix,iy,ir;
+
+void setup(){
+  size(500,500);
+}
+
+void draw(){
+  background(255);
+
+  // OutCircle
+  ox = width/2;
+  oy = height/2;
+  or = 200;
+  ellipse(ox,oy,or*2,or*2);
+
+  // CenterCircle
+  float cx,cy,cr;
+  cx = ox;
+  cy = oy;
+  cr = or - ir;
+  ellipse(cx,cy,cr*2,cr*2);
+  
+  // InCircle
+  ix = mouseX;
+  iy = mouseY;
+  ir = 50;
+  ellipse(ix,iy,ir*2,ir*2);
+
+  float dx,dy;
+  dx = ix - ox;
+  dy = iy - oy;
+  if((cr*cr) >= (dx*dx)+(dy*dy)){
+    fill(255,0,0);
+  }
+  else{
+    fill(255);
+  }
+}
