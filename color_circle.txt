@@ -1,0 +1,64 @@
+float cx,cy,r;
+int cr = 255,cg = 255,cb = 255;
+int px,py;
+
+void setup(){
+  size(600,600);
+  cx = width/2;
+  cy = height/2;
+  r = 30;
+}
+
+void draw(){
+  ellipse(mouseX,mouseY,2*r,2*r);
+  fill(cr,cg,cb);
+  noStroke();
+}
+
+void mousePressed(){
+  px = mouseX;
+  py = mouseY;
+  
+  if(cb>0){
+    cb -= 1;
+    ellipse(px,py,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+  else if(cg>0){
+    cg -= 1;
+    ellipse(px,py,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+  else if(cr>0){
+    cr -= 1;
+    ellipse(px,py,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+}
+
+void mouseDragged(){
+  if(cb>0){
+    cb -= 1;
+    ellipse(mouseX,mouseY,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+  else if(cg>0){
+    cg -= 1;
+    ellipse(mouseX,mouseY,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+  else if(cr>0){
+    cr -= 1;
+    ellipse(mouseX,mouseY,2*r,2*r);
+    fill(cr,cg,cb);
+  }
+}
+
+void mouseReleased(){
+  if(cr == 0 && cg == 0 && cb == 0){
+    cr = 255;
+    cg = 255;
+    cb = 255;
+    r = 30;
+  }
+}
