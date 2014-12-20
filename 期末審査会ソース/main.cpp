@@ -1,4 +1,6 @@
 ﻿#include "common.h"
+#include "Result/Result.h"
+#include "Title/Title.h"
 
 // アプリウインドウの準備
 AppEnv app_env(Window::WIDTH, Window::HEIGHT,
