@@ -18,29 +18,74 @@ Square::Square(){
 
   count_stop = false; // 一時停止用のスイッチ
 
-  time_limit = 3600; // 制限時間は各ステージ１分
+  time_limit = 360; // 制限時間は各ステージ１分
 
-  stage_No = 0;
+  //// 四角の色をランダムで決める為のループ文
+  //for (i = 0; i < x; i++){
+  //  random_count = random.fromZeroToLast(4);                                        // random_countに０～３の値をランダムで与える
+  //  Object[i] = { WIDTH / 2, -100, 50, 50, false, false, 0, Color(1, 1, 1), 1, 1}; // オブジェクトの初期化
+  //  switch (random_count){
+  //  case 0: Object[i].col = Color(1, 1, 0);
+  //              Object[i].points = 2;
+  //              Object[i].recycle = 0;
+  //              break;
+  //  case 1: Object[i].col = Color(1, 0, 1);
+  //              Object[i].points = 3;
+  //              Object[i].recycle = 0;
+  //              break;
+  //  case 2: Object[i].col = Color(0, 1, 1);
+  //              Object[i].points = 5;
+  //              Object[i].recycle = 0;
+  //              break;
+  //  default:Object[i].points = -10; // case3の時は初期化した時に入っている白色の四角を表示
+  //  }
+  //}
+}
 
-  // 四角の色をランダムで決める為のループ文
-  for (i = 0; i < x; i++){
-    random_count = random.fromZeroToLast(4);                                        // random_countに０～３の値をランダムで与える
-    Object[i] = { WIDTH / 2, -100, 50, 50, false, false, 0, Color(1, 1, 1), 1, 1}; // オブジェクトの初期化
+// ステージ毎のオブジェクト管理
+void Square::Variation(int& i, int& stage_no){
+  // 初期位置に戻して、ランダムカラーで再登場させる
+  random_count = random.fromZeroToLast(4);                                        // random_countに０～３の値をランダムで与える
+  Object[i] = { WIDTH / 2, -100, 50, 50, false, false, 0, Color(1, 1, 1), 1, 1 }; // オブジェクトの初期化
+  switch (stage_no){
+    // ステージ１
+  case 0:
     switch (random_count){
     case 0: Object[i].col = Color(1, 1, 0);
-                Object[i].points = 2;
-                Object[i].recycle = 0;
-                break;
+      Object[i].points = 2;
+      Object[i].recycle = 0;
+      break;
     case 1: Object[i].col = Color(1, 0, 1);
-                Object[i].points = 3;
-                Object[i].recycle = 0;
-                break;
+      Object[i].points = 3;
+      Object[i].recycle = 0;
+      break;
     case 2: Object[i].col = Color(0, 1, 1);
-                Object[i].points = 5;
-                Object[i].recycle = 0;
-                break;
+      Object[i].points = 3;
+      Object[i].recycle = 0;
+      break;
     default:Object[i].points = -10; // case3の時は初期化した時に入っている白色の四角を表示
     }
+    break;
+
+    // ステージ２
+  case 1:
+    switch (random_count){
+    case 0: Object[i].col = Color(1, 0, 0);
+      Object[i].points = 2;
+      Object[i].recycle = 0;
+      break;
+    case 1: Object[i].col = Color(0, 1, 0);
+      Object[i].points = 3;
+      Object[i].recycle = 0;
+      break;
+    case 2: Object[i].col = Color(0, 0, 1);
+      Object[i].points = 3;
+      Object[i].recycle = 0;
+      break;
+    default:Object[i].points = -10; // case3の時は初期化した時に入っている白色の四角を表示
+    }
+    break;
+
   }
 }
 
@@ -70,11 +115,12 @@ void Square::Countdown(){
 }
 
 // 四角を動かす為の関数
-void Square::Update(AppEnv& app_env){
+void Square::Update(AppEnv& app_env, int& stage_no){
   mouse_pos = app_env.mousePosition(); // マウスのポジションを記憶
 
   if (!count_stop){                 // 一時停止がオフなら動く
     for (i = 0; i < x; i++){
+
       // 関数"Countdown"でtriggerがtrueになったら
       if (trigger){
         if (!Object[i].active){        // まだactiveがtrueじゃないモノを
@@ -100,7 +146,7 @@ void Square::Update(AppEnv& app_env){
 
       // クリックをしたら画面中央上部に飛んでいく
       if (Object[i].isHit){
-        Object[i].y += flip_MOVE;                  // 飛んでいく速度は現在10
+        Object[i].y += flip_MOVE;                  // 飛んでいく速度は現在12
         Object[i].x -= Object[i].mem_x / 30; // 記憶しておいたX座標を30で割り、画面の真ん中へ飛ぶようにする
         Object[i].width -= 1;                          // 同時に横幅と縦幅を縮める
         Object[i].height -= 1;
@@ -111,24 +157,7 @@ void Square::Update(AppEnv& app_env){
         recycle_point += Object[i].recycle;
         Object[i].isHit = false;
 
-        // 初期位置に戻して、ランダムカラーで再登場させる
-        random_count = random.fromZeroToLast(4);                                        // random_countに０～３の値をランダムで与える
-        Object[i] = { WIDTH / 2, -100, 50, 50, false, false, 0, Color(1, 1, 1), 1, 1 }; // オブジェクトの初期化
-        switch (random_count){
-        case 0: Object[i].col = Color(1, 1, 0);
-          Object[i].points = 2;
-          Object[i].recycle = 0;
-          break;
-        case 1: Object[i].col = Color(1, 0, 1);
-          Object[i].points = 3;
-          Object[i].recycle = 0;
-          break;
-        case 2: Object[i].col = Color(0, 1, 1);
-          Object[i].points = 3;
-          Object[i].recycle = 0;
-          break;
-        default:Object[i].points = -10; // case3の時は初期化した時に入っている白色の四角を表示
-        }
+        Variation(i, stage_no);
       }
 
       // オブジェクトが左に流れきったら(クリックされずに流れたら)位置を戻す
@@ -138,24 +167,7 @@ void Square::Update(AppEnv& app_env){
         Object[i].active = false;
         Object[i].x = WIDTH / 2;
 
-        // 次に出てくる時に色が変わるよう、再度カラー変更
-        random_count = random.fromZeroToLast(4);                                        // random_countに０～３の値をランダムで与える
-        Object[i] = { WIDTH / 2, -100, 50, 50, false, false, 0, Color(1, 1, 1), 1, 1 }; // オブジェクトの初期化
-        switch (random_count){
-        case 0: Object[i].col = Color(1, 1, 0);
-          Object[i].points = 2;
-          Object[i].recycle = 0;
-          break;
-        case 1: Object[i].col = Color(1, 0, 1);
-          Object[i].points = 3;
-          Object[i].recycle = 0;
-          break;
-        case 2: Object[i].col = Color(0, 1, 1);
-          Object[i].points = 3;
-          Object[i].recycle = 0;
-          break;
-        default:Object[i].points = -10; // case3の時は初期化した時に入っている白色の四角を表示
-        }
+        Variation(i, stage_no);
       }
     }
 
@@ -227,7 +239,7 @@ void Square::Pause(AppEnv& app_env){
 }
 
 // 制限時間の表示・処理
-void Square::Limit(Texture& num){
+void Square::Limit(Texture& num, int& game_mode, int& stage_no){
   int time=time_limit/60;
   // １桁目
   drawTextureBox(WIDTH/2 - 50, HEIGHT/2 - 50, 40, 50,
@@ -243,6 +255,12 @@ void Square::Limit(Texture& num){
     }
     else{
       count_stop = true;
+      stage_no += 1;
+      game_mode = 2;
+      for (int i = 0; i < x; i++){
+        Variation(i, stage_no);
+      }
+      time_limit = 3600;
     }
   }
 }

@@ -13,14 +13,15 @@ int main() {
   Texture title("res/png/title.png");        // タイトル画面(仮)
   Texture result("res/png/result.png");  // リザルト画面(仮)
 
-  int game_mode = 0;
+  int game_mode = 0; // タイトル・本編・リザルトの切り替え用
+  int stage_no = 0;      // ステージ切り替え用
 
   // クラスの宣言
   Square square;
 
   while (app_env.isOpen()) {
 
-    square.Update(app_env); // オブジェクトの位置情報などをループの頭で更新
+    square.Update(app_env, stage_no); // オブジェクトの位置情報などをループの頭で更新
     // 描画準備
     app_env.setupDraw();
 
@@ -28,6 +29,9 @@ int main() {
     if (app_env.isPushKey('A')) game_mode = 0;
     if (app_env.isPushKey('S')) game_mode = 1;
     if (app_env.isPushKey('D')) game_mode = 2;
+
+    if (app_env.isPushKey('[')) stage_no = 0;
+    if (app_env.isPushKey(']')) stage_no = 1;
 
     switch (game_mode){
     case 0:
@@ -41,12 +45,12 @@ int main() {
       square.disp_Score(num); // スコア表示用
       square.recycle_Score(num); // リサイクルポイント表示用
       square.Pause(app_env);   // ポーズ機能
-      square.Limit(num);           // 制限時間の表示・処理
+      square.Limit(num, game_mode, stage_no);           // 制限時間の表示・処理
       //    drawMapChip();
       break;
 
     case 2:
-      disp_Result(result);
+      disp_Result(result, square.count_stop);
       break;
 
     }

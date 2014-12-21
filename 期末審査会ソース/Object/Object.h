@@ -39,23 +39,21 @@ private:
   int score;             // ゲームとしての得点
   int recycle_point; // 特定のオブジェクトをクリックした時の数値
 
-  bool count_stop; // 一時停止用
-
   int time_limit; // 制限時間
-
-  int stage_No;
 
 public:
   Square(); // コンストラクタの呼び出し用
+  bool count_stop; // 一時停止用
 
+  void Variation(int&, int&);       // ステージ毎のオブジェクト管理
   void Draw();                   // 四角を表示する為の関数
   void Countdown();         // タイマーをカウントする為の関数
-  void Update(AppEnv&); // 四角を動かす為の関数
+  void Update(AppEnv&, int&); // 四角を動かす為の関数
 
   void disp_Score(Texture&);   // スコアを表示する為の関数
   int sub_Score();       // 減算されるスコア関数
   void recycle_Score(Texture&);  // 特定のオブジェクトをクリックした時に加算されるスコア関数
   void board(Texture&); // リサイクル標識の表示
   void Pause(AppEnv&); // 一時停止機能
-  void Limit(Texture&); // 制限時間表示・処理
+  void Limit(Texture&, int&, int&); // 制限時間表示・処理
 };
