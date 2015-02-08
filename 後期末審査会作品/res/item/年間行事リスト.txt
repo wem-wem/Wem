@@ -1,0 +1,123 @@
+‚PD“üŠwŽ®
+‚QD”~‰J“ü‚è
+‚RD‰Ä‹x‚Ý(‘O”¼)
+‚SD‰Ä‹x‚Ý(Œã”¼)
+‚TD\ŒÜ–é
+‚UDƒnƒƒEƒBƒ“
+‚VDƒNƒŠƒXƒ}ƒX
+‚WD‚¨³ŒŽ
+‚XDƒoƒŒƒ“ƒ^ƒCƒ“
+10D‚Ð‚È‚Ü‚Â‚è
+
+// ” ‚ÌØ‚èŽæ‚èƒTƒCƒY---------------------
+963 * 1024
+
+// ƒJƒ^ƒƒO(GIMP“àÀ•W)
+‘Oc-429(71), -167(417)  •:99, ‚‚³:99
+ŽŸc330(830), -167(417)  •:99, ‚‚³:99
+
+// ƒeƒLƒXƒg‚Ì‘‚«Žn‚ß
+540, 25
+
+// ƒeƒLƒXƒg˜g‚ÌI‚í‚è
+900, 318
+
+// •¶ŽšƒTƒCƒY
+45
+
+// ƒXƒe[ƒW‚S--------------------------------
+ƒ‰ƒ€ƒlc‚P‚O‚O‰~
+…•—‘Dc‚P‚O‚O‚O‰~
+’ñ@“”c‚R‚T‚O‚O‰~
+
+‰Ô‰ÎƒZƒbƒg‚Pc‚T‚O‚O‰~
+‰Ô‰ÎƒZƒbƒg‚Qc‚Q‚O‚O‚O‰~
+‰Ô‰ÎƒZƒbƒg‚Rc‚S‚T‚O‚O‰~
+
+‚¤‚¿‚íc‚R‚O‚O‰~
+î•—‹@c‚T‚O‚O‚O‰~
+‰H–³‚µî•—‹@c‚W‚X‚O‚O‰~
+
+
+// ƒXƒe[ƒW‚T--------------------------------
+‚·‚·‚«‚Pc‚P‚O‚O‰~
+‚·‚·‚«‚Qc‚P‚O‚O‚O‰~
+‚·‚·‚«‚Rc‚R‚O‚O‚O‰~
+
+‚¾‚ñ‚²‚Pc‚R‚O‚O‰~
+‚¾‚ñ‚²‚Qc‚P‚T‚O‚O‰~
+‚¾‚ñ‚²‚Rc‚R‚O‚O‚O‰~
+
+“’@“Ûc‚W‚O‚O‰~
+‹}@{c‚R‚O‚O‚O‰~
+’ƒŠíƒZƒbƒgc‚V‚U‚O‚O‰~
+
+
+// ƒV[ƒYƒ“‚U--------------------------------
+‚¨‰ÙŽq‚Pc‚P‚O‚O‰~
+‚¨‰ÙŽq‚Qc‚P‚Q‚O‚O‰~
+‚¨‰ÙŽq‚Rc‚R‚R‚O‚O‰~
+
+ƒNƒbƒL[c‚R‚O‚O‰~
+–X@Žqc‚P‚W‚O‚O‰~
+ƒWƒƒƒbƒNƒIƒ‰ƒ“ƒ^ƒ“c‚S‚T‚O‚O‰~
+
+‚Ù‚¤‚«c‚T‚O‚O‰~
+Š»‰±c‚T‚O‚O‚O‰~
+ƒ}ƒXƒNc‚P‚O‚O‚O‚O‰~
+
+
+// ƒV[ƒYƒ“‚V--------------------------------
+ƒcƒŠ[ü‚è‚Pc‚T‚O‚O‰~
+ƒcƒŠ[ü‚è‚Qc‚Q‚O‚O‚O‰~
+ƒcƒŠ[c‚P‚O‚O‚O‚O‰~
+
+ƒP[ƒL‚Pc‚R‚O‚O‰~
+ƒP[ƒL‚Qc‚R‚O‚O‚O‰~
+ƒP[ƒL‚Rc‚X‚O‚O‚O‰~
+
+ƒvƒŒƒ[ƒ“ƒg‚Pc‚P‚O‚O‚O‰~
+ƒvƒŒƒ[ƒ“ƒg‚Qc‚T‚O‚O‚O‰~
+ƒvƒŒƒ[ƒ“ƒg‚Rc‚Q‚T‚O‚O‚O‰~
+
+
+// ƒV[ƒYƒ“‚W--------------------------------
+‚Ý‚©‚ñc‚R‚O‚O‰~
+‹¾–Ý‚Pc‚Q‚O‚O‚O‰~
+‹¾–Ý‚Qc‚R‚T‚O‚O‰~
+
+–å¼‚Pc‚V‚O‚O‰~
+–å¼‚Qc‚Q‚W‚O‚O‰~
+–å¼‚Rc‚U‚W‚O‚O‰~
+
+‚¨‚¹‚¿‚Pc‚P‚O‚O‚O‰~
+‚¨‚¹‚¿‚Qc‚R‚T‚O‚O‰~
+‚¨‚¹‚¿‚Rc‚P‚R‚O‚O‚O‰~
+
+
+// ƒV[ƒYƒ“‚X--------------------------------
+ƒn[ƒgƒV[ƒ‹c‚R‚O‚O‰~
+ƒ‰ƒuƒŒƒ^[‚Pc‚P‚T‚O‚O‰~
+ƒ‰ƒuƒŒƒ^[‚Qc‚T‚O‚O‚O‰~
+
+‚Ê‚¢‚®‚é‚Ý‚Pc‚P‚O‚O‚O‰~
+‚Ê‚¢‚®‚é‚Ý‚Qc‚R‚T‚O‚O‰~
+‚Ê‚¢‚®‚é‚Ý‚Rc‚W‚T‚O‚O‰~
+
+ƒ`ƒ‡ƒR‚Pc‚T‚O‚O‰~
+ƒ`ƒ‡ƒR‚Qc‚Q‚W‚O‚O‰~
+ƒ`ƒ‡ƒR‚Rc‚V‚U‚O‚O‰~
+
+
+// ƒV[ƒYƒ“‚P‚O------------------------------
+‚Ð‚È‚ ‚ç‚êc‚S‚O‚O‰~
+÷@–Ýc‚P‚U‚O‚O‰~
+•H@–Ýc‚S‚O‚O‚O‰~
+
+”~‚Ì‰Ô‚Pc‚R‚O‚O‰~
+”~‚Ì‰Ô‚Qc‚P‚T‚O‚O‰~
+”~‚Ì‰Ô‚Rc‚T‚O‚O‚O‰~
+
+‚Ð‚ÈlŒ`‚Pc‚P‚T‚O‚O‰~
+‚Ð‚ÈlŒ`‚Qc‚T‚O‚O‚O‰~
+‚Ð‚ÈlŒ`‚Rc‚X‚W‚O‚O‰~

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{64bf6fe1-3a56-4217-b142-c4b8acad9b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{e3328b72-d816-45bb-a565-b60a8e5c43f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{d20eeff6-a503-4e09-a7cd-efd7de46fbb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Title">
+      <UniqueIdentifier>{cc96ae4c-40fb-4bc8-9fd0-d31bbf556845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Result">
+      <UniqueIdentifier>{8524cfa7-0325-488a-86dd-2354f85968d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shop">
+      <UniqueIdentifier>{d97d6315-ee8c-4ed5-9339-48816b42cdf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Season">
+      <UniqueIdentifier>{c3d97c55-6a97-4c90-b8c8-be3404bd128f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Catalog">
+      <UniqueIdentifier>{60ebfd93-e6b9-4c9d-aaca-d1f1955cc40b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\lib\appEnv.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\audio.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\camera2D.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\fileUtil.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\glExt.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\glfwWindow.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\graph.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\matrix.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\os_win.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\png.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\random.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\texture.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\utils.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\wav.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\glTexture.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\font.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Object\Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Title\Title.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Result\Result.cpp">
+      <Filter>Result</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shop\Shop.cpp">
+      <Filter>Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Season\Season.cpp">
+      <Filter>Season</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Catalog\Catalog.cpp">
+      <Filter>Catalog</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\lib\appEnv.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\audio.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\camera2D.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\defines.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\fileUtil.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\glExt.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\glfwWindow.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\graph.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\matrix.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\os.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\os_win.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\png.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\random.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\texture.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\utils.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\vector.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\wav.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\glTexture.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\font.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\Object\Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Collision.h" />
+    <ClInclude Include="src\Result\Result.h">
+      <Filter>Result</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Title\Title.h">
+      <Filter>Title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shop\Shop.h">
+      <Filter>Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Season\Season.h">
+      <Filter>Season</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Catalog\Catalog.h">
+      <Filter>Catalog</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
